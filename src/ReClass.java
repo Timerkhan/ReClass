@@ -3,13 +3,14 @@
  */
 public class ReClass {
         public static String getNumberStandart(String a) {
-            if ( a == null ){
-                return "Enter the name";
+            try {
+               return a.toLowerCase().replaceAll("\\s|\\.", "");
             }
-
-            return a.toLowerCase().replaceAll("\\s|\\.", "");
-        }
-        public static void main(String[] args) throws java.lang.Exception {
+            catch (NullPointerException e) {
+                return "";
+            }
+            }
+            public static void main(String[] args) throws java.lang.Exception {
             {
                 String n = "wasD.12s 2e daDv.sW";
                 System.out.println(getNumberStandart(null));
